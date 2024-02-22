@@ -40,7 +40,7 @@ function App() {
       <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} />
       <br/>
       Jelszó:{" "}
-      <input type="password" placeholder="jelszó" value={password} onChange={(e) => setPassword(e.target.value)} />
+      <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
       <br/>
       <button onClick={handleLogin}>Bejelentkezés</button>
       {token && (
@@ -50,9 +50,9 @@ function App() {
           {data && (
             <ul>
               {data.map((item) => (
-                <li key={item.id}>
+                <p key={item.id}>
                   {item.name} - {item.price}
-                </li>
+                </p>
               ))}
             </ul>
           )}
